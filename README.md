@@ -1,2 +1,2 @@
-# waffle-website
-The Website For Waffle Programming
+# waffleprograming.github.io
+The website for Waffle Programming
