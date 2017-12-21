@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
   </head>
 <body>
-  
+  <script>
+  function createCanvas() {
+  document.getElementById("workspace").innerHTML+="<canvas id="waffleEditor" width="400" height="400"></canvas>";
+  }
+  </script>
   <div class="row">
     <div class="column">Waffle Programming</div>
-    <div class="column">New Project</div>
+    <div class="column" onclick="createCanvas();">New Project</div>
     <div class="column">Help</div>
     <div class="column">Contact</div>
   </div>
@@ -19,6 +23,8 @@
   <blockquote>
   <p><em>Work in progress...</em></p>
   </blockquote>
+  <div id="workspace">
   
+  </div>
 </body>
 </html>
