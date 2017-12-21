@@ -6,21 +6,7 @@
   </head>
 <body>
 
-  <script>
-  function createCanvas() {
-  document.getElementById("workspace").innerHTML='  <canvas id="waffleEditor" width="400" height="400"></canvas>  ';
-    var script = document.createElement("SCRIPT");
-    script.setAttribute("src","https://rawgit.com/waffleprogramming/waffleprogramming.github.io/master/canvas.js");
-    document.body.appendChild(script);
-    var editor = {
-    render: function() {
-  canvasJS.text.fill("30px Arial","This is the Waffle editor (WIP)",100,100);
-  },
-      interval: setInterval(function() {canvasJS.text.fill("30px Arial","This is the Waffle editor (WIP)",100,100);},10)
-    
-    };
-  }
-  </script>
+ 
 
   <div class="row">
     <div class="column">Waffle Programming</div>
