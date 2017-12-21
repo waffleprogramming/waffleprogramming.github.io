@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
   </head>
 <body>
+
   <script>
   function createCanvas() {
-  document.getElementById("workspace").innerHTML='<canvas id="waffleEditor" width="400" height="400"></canvas>';
+  document.getElementById("workspace").innerHTML='  <canvas id="waffleEditor" width="400" height="400"></canvas>  <script src="https://rawgit.com/waffleprogramming/waffleprogramming.github.io/master/canvas.js"></script>';
+    var editor = {
+    render: function() {
+  canvasJS.text.fill("30px Arial","This is the Waffle editor (WIP)",100,100);
+  },
+    
+    };
   }
   </script>
+    <script src="https://rawgit.com/waffleprogramming/waffleprogramming.github.io/master/canvas.js"></script>
   <div class="row">
     <div class="column">Waffle Programming</div>
     <div class="column" onclick="createCanvas();">New Project</div>
