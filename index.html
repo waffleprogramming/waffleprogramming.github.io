@@ -6,7 +6,19 @@
   </head>
 <body>
 
-  <script>
+  <div class="row">
+    <div class="column">Waffle Programming</div>
+    <div class="column" onclick="createCanvas();">New Project</div>
+    <p><a href="https://waffleprogramming.github.io/waffle-wiki">Help<a><p>
+    
+    <div class="column">Contact</div>
+  </div>
+
+  <p>Work in progress...</p>
+  
+  <div id="workspace">  </div>
+  
+   <script>
   function createCanvas() {
   document.getElementById("workspace").innerHTML='  <canvas id="waffleEditor" width="400" height="400"></canvas>  ';
     var script = document.createElement("SCRIPT");
@@ -21,20 +33,6 @@
     };
   }
   </script>
-
-  <div class="row">
-    <div class="column">Waffle Programming</div>
-    <div class="column" onclick="createCanvas();">New Project</div>
- <div class="column" onclick="location.assign('https://waffleprogramming.github.io/waffle-wiki/');">Help</div>
-    
-    <div class="column">Contact</div>
-  </div>
-
-  <blockquote>
-  <p><em>Work in progress...</em></p>
-  </blockquote>
-  <div id="workspace">
   
-  </div>
 </body>
 </html>
