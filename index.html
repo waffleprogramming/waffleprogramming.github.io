@@ -3,9 +3,17 @@
   <head>
     <title>Waffle Programming</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      div {
+      display: none;
+      }
+      #workspace, .column, .row {
+      display: block;
+      }
+    </style>
   </head>
 <body>
-
+<div lang="en"> 
   <div class="row">
     <div class="column">Waffle Programming</div>
     <div class="column" onclick="createCanvas();">New Project</div>
@@ -16,8 +24,22 @@
 
   <p>Work in progress...</p>
   
-  <div id="workspace">  </div>
+
+      </div>
+      <div lang="es"> 
+  <div class="row">
+    <div class="column">programación de waffles</div>
+    <div class="column" onclick="createCanvas();">nuevo proyecto</div>
+    <p><a href="https://waffleprogramming.github.io/waffle-wiki">ayuda<a><p>
+    
+    <div class="column">contacto</div>
+  </div>
+
+  <p>trabajo en progreso...</p>
   
+  
+      </div>
+      <div id="workspace">  </div>
    <script>
   function createCanvas() {
   document.getElementById("workspace").innerHTML='  <canvas id="waffleEditor" width="400" height="400"></canvas>  ';
@@ -32,7 +54,15 @@
     
     };
   }
+     var lang = "en";
+     var languages = ["en","es"];
+     var languagenames = ["english","spanish"];
+  function setLang() {
+  lang = languages[languagenames.indexOf(prompt("Language"))];
+  document.getElementsByTagName("style")[0].innerHTML = "div {display: none;}#workspace, .column, .row {display: block;} div:lang("+lang+") {display:block;}";
+  }
+     document.getElementsByTagName("style")[0].innerHTML = "div {display: none;}#workspace, .column, .row {display: block;} div:lang("+lang+") {display:block;}";
   </script>
-  
+      <button onclick="setLang();">language</button>
 </body>
 </html>
