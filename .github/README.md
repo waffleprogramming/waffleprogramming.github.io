@@ -1,3 +1,9 @@
+---
+title: Info
+url: /in
+---
+
+
 # waffleprograming.github.io
 The website for Waffle Programming
 <br>
