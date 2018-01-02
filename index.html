@@ -1,68 +1,117 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Waffle Programming </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waffle Programming Concept Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style>
-      div {
-      display: none;
+      body {
+        margin: 0;
+        font-size: 0;
+        font-family: cursive;
       }
-      #workspace, .column, .row {
-      display: block;
+      .navbar {
+        height: 50px;
+        background-color: #FF7F27;
+        position: relative;
+      }
+      .navbar .logo {
+        font-size: 20px;
+        line-height: 1;
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        display: inline-block;
+      }
+      .navbar ul {
+        margin: 8px 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navbar li {
+        display: inline-block;
+      }
+      .navbar li a {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 1;
+        color: white;
+        text-decoration: none;
+        padding: 7px 15px;
+      }
+      .navbar li:not(:last-child) {
+        border-right: 2px solid white;
+      }
+      .banner {
+        display: flex;
+        background-color: #B5E61D;
+        height: calc(100vh - 50px);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+      .banner .container p {
+        font-size: 20px;
+      }
+      .banner .container .button {
+        font-size: 20px;
+        background-color: #00A2E8;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .content {
+        border: 5px solid #ED1C24;
+        color: #ED1C24;
+      }
+      .content p {
+        font-size: 20px;
+        margin: 45px 0;
+        text-align: center;
+      }
+      .footer {
+        background-color: white;
+      }
+      .footer .logo {
+        color: #494949;
+      }
+      .footer li a {
+        color: #ED1C24;
+      }
+      .footer li:not(:last-child) {
+        border-right-color: #ED1C24;
       }
     </style>
   </head>
-<body>
-<div lang="en"> 
-  <div class="row">
-    <div class="column">Waffle Programming</div>
-    <div class="column" onclick="createCanvas();">New Project</div>
-    <p><a href="https://waffleprogramming.github.io/waffle-wiki">Help</a><p>
-    
-    <div class="column">Contact</div>
-  </div>
-
-  <p>Work in progress...</p>
-  
-
+  <body>
+    <div class="navbar">
+      <a href="." class="logo">(Logo here)</a>
+      <ul>
+        <li><a href="#new">New Project</a></li>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="banner">
+      <div class="container">
+        <p>How to get started with waffle...</p>
+        <a class="button" href="#">read this article</a>
       </div>
-      <div lang="es"> 
-  <div class="row">
-    <div class="column">programación de waffles</div>
-    <div class="column" onclick="createCanvas();">nuevo proyecto</div>
-    <p><a href="https://waffleprogramming.github.io/waffle-wiki">ayuda</a><p>
-    
-    <div class="column">contacto</div>
-  </div>
-
-  <p>trabajo en progreso...</p>
-  
-  
-      </div>
-      <div id="workspace">  </div>
-   <script>
-  function createCanvas() {
-  document.getElementById("workspace").innerHTML='  <canvas id="waffleEditor" width="400" height="400"></canvas>  ';
-    var script = document.createElement("SCRIPT");
-    script.setAttribute("src","https://rawgit.com/waffleprogramming/waffleprogramming.github.io/master/canvas.js");
-    document.body.appendChild(script);
-    var editor = {
-    render: function() {
-  canvasJS.text.fill("30px Arial","This is the Waffle editor (WIP)",100,100);
-  },
-      interval: setInterval(function() {canvasJS.text.fill("`23px Arial","This is the Waffle editor (WIP)",100,100);},10)
-    
-    };
-  }
-     var lang = "en";
-     var languages = ["en","es"];
-     var languagenames = ["english","spanish"];
-  function setLang() {
-  lang = languages[languagenames.indexOf(prompt("Language"))];
-  document.getElementsByTagName("style")[0].innerHTML = "div {display: none;}#workspace, .column, .row {display: block;} div:lang("+lang+") {display:block;}";
-  }
-     document.getElementsByTagName("style")[0].innerHTML = "div {display: none;}#workspace, .column, .row {display: block;} div:lang("+lang+") {display:block;}";
-  </script>
-      <button onclick="setLang();">language</button>
-</body>
-</html>
+    </div>
+    <div class="content">
+      <p>more content here</p>
+    </div>
+    <div class="navbar footer">
+      <a href="." class="logo">(Logo in greyscale)</a>
+      <ul>
+        <li><a href="https://github.com/">Github</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="#help">Help</a></li>
+      </ul>
+    </div>
+  </body>
